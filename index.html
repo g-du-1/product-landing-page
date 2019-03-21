@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="style.css"> -->
+<title>Product Landing Page</title>
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 500px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+}
+</style>
+
+<header id="header">
+  <img src="https://i.imgur.com/TdkOGPt.jpg" alt="Company logo" height="200px" width="400px" id="header-img">
+  <nav id="nav-bar">
+    <a href="#info" class="nav-link">The Company</a>
+    <a href="#video" class="nav-link">Video</a>
+    <a href="#products" class="nav-link">Products</a>
+</header>
+<section id="info">
+  <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="products" class="flex-container">
+  <div>Product 1</div>
+  <div>Product 2</div>
+  <div>Product 3</div>
+
+</section>
+
+<form action="https://www.freecodecamp.org/email-submit" id="form">
+  Subscribe to our newsletter: <br>
+  <input type="email" id="email" name="email" placeholder="Enter Email" required>
+  <input type="submit" id="submit">
+</form>
+
+
+<footer>Logo author: Cionca Bogdan - https://www.stockvault.net/</footer>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
+
