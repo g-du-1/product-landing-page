@@ -11,35 +11,38 @@
 * {
   box-sizing: border-box;
   max-width: 100%;
-  text-align: center;
   overflow: auto;
+  text-align: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 448px) {
   .flex-container {
     flex-direction: column;
   }
-}
 
-/* Video */
+  /* Video */
 
-.resp-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
+  .resp-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
 
-.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  .resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .flex-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 </style>
@@ -51,8 +54,8 @@
     <a href="#video" class="nav-link">Video</a>
     <a href="#products" class="nav-link">Products</a>
 </header>
-<section class="resp-container">
-  <iframe class="resp-iframe" id="video" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section class="resp-container"> <!-- Original size: width="560" height="315" 80% of size: width="448" height="254"-->
+  <iframe class="resp-iframe" id="video" width="448" height="254" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 <section id="info">
 </section>
@@ -60,16 +63,12 @@
   <div>Product 1</div>
   <div>Product 2</div>
   <div>Product 3</div>
-
 </section>
-
 <form action="https://www.freecodecamp.org/email-submit" id="form">
   Subscribe to our newsletter: <br>
   <input type="email" id="email" name="email" placeholder="Enter Email" required>
   <input type="submit" id="submit">
 </form>
-
-
 <footer>Logo author: Cionca Bogdan - https://www.stockvault.net/</footer>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
