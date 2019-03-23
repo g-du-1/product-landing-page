@@ -12,11 +12,77 @@
   box-sizing: border-box;
   max-width: 100%;
   overflow: auto;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+body {
+  background-color: #e4e4e4;
+}
+
+header {
+  background-color: white;
+  box-shadow: 1px 1px 1px #000000;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#info {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 20px; 
+  box-shadow: 1px 1px 1px #000000;
+  width: 900px;
+  padding: 20px;
+}
+
+.resp-container {
   text-align: center;
 }
 
-@media screen and (max-width: 448px) {
-  .flex-container {
+.flex-container {
+  display: flex;
+  width: 900px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.column {
+  background-color: white;
+  flex-basis: calc(33% - 20px);
+  box-shadow: 1px 1px 1px #000000;
+  margin: 20px 0;
+  padding: 20px;
+  height: auto;
+}
+
+form {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 1px 1px 1px #000000;
+  width: 900px;
+  padding: 20px;
+}
+
+#email {
+  height: 1.3rem;
+}
+
+footer {
+  background-color: white;
+  box-shadow: 1px 1px 1px #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+@media (max-width: 448px) {
+  .flex-container, header {
     flex-direction: column;
   }
 
@@ -24,7 +90,7 @@
 
   .resp-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
   }
@@ -38,38 +104,43 @@
   }
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
 </style>
 
 <header id="header">
-  <img src="https://i.imgur.com/TdkOGPt.jpg" alt="Company logo" height="150px" width="300px" id="header-img">
+  <img src="https://i.imgur.com/TdkOGPt.jpg" alt="Company logo" height="100px" width="200px" id="header-img">
   <nav id="nav-bar">
-    <a href="#info" class="nav-link">The Company</a>
+    <a href="#info" class="nav-link">Information</a>
     <a href="#video" class="nav-link">Video</a>
     <a href="#products" class="nav-link">Products</a>
 </header>
+<section id="info">
+  <h1>Information</h1>
+  <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
+</section>
 <section class="resp-container"> <!-- Original size: width="560" height="315" 80% of size: width="448" height="254"-->
   <iframe class="resp-iframe" id="video" width="448" height="254" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-<section id="info">
-</section>
 <section id="products" class="flex-container">
-  <div>Product 1</div>
-  <div>Product 2</div>
-  <div>Product 3</div>
+  <div class="column col-1">
+    <p>Product 1</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in. Praesent egestas est eu bibendum suscipit. Fusce condimentum, risus eleifend iaculis maximus, nisl dui iaculis felis, ornare bibendum nulla ex non magna. </p>
+  </div>
+  <div class="column col-2">
+    <p>Product 2</p>
+    <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget. Duis suscipit, mi nec vehicula fermentum, lorem turpis eleifend leo, eu maximus mauris augue a metus. Fusce malesuada accumsan lacus blandit viverra. </p>
+  </div>
+  <div class="column col-3">
+    <p>Product 3</p>
+    <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis. Nulla in velit et mi pharetra ullamcorper sed sed felis.</p>
+  </div>
 </section>
 <form action="https://www.freecodecamp.org/email-submit" id="form">
   Subscribe to our newsletter: <br>
   <input type="email" id="email" name="email" placeholder="Enter Email" required>
   <input type="submit" id="submit">
 </form>
-<footer>Logo author: Cionca Bogdan - https://www.stockvault.net/</footer>
+<footer>
+  <p>Logo author: Cionca Bogdan - https://www.stockvault.net/</p>
+</footer>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
-
