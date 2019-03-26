@@ -18,6 +18,8 @@
 body {
   /*background-color: #e4e4e4;*/
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 header {
@@ -28,7 +30,7 @@ header {
   border-bottom: 1px solid #dee2e6;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
   width: 900px;
 
   position: fixed;
@@ -58,15 +60,18 @@ a:hover {
 
 #info {
   background-color: white;
-  margin: 80px auto 0 auto;
+  margin: 0 auto 0 auto;
   width: 900px;
-  padding: 20px;
+  padding: 65px 20px 0 20px;
   text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .video-wrapper {
   max-width: 900px;
-  margin: 20px auto 10px auto;
+  margin: 0 auto 10px auto;
+  padding-top: 65px;
 }
 
 .resp-container {
@@ -89,6 +94,7 @@ a:hover {
   width: 900px;
   margin: auto;
   justify-content: space-between;
+  padding-top: 55px;
 }
 
 .column {
@@ -124,6 +130,14 @@ form {
   height: 1.3rem;
 }
 
+#submit {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
 footer {
   border-top: 1px solid #dee2e6;
   background-color: white;
@@ -138,7 +152,6 @@ footer {
   .flex-container {
     flex-direction: column;
   }
-
 }
 
 </style>
@@ -149,14 +162,15 @@ footer {
     <a href="#info" class="nav-link">Information</a>
     <a href="#video" class="nav-link">Video</a>
     <a href="#products" class="nav-link">Products</a>
+  </nav>
 </header>
 <section id="info">
   <h1>Information</h1>
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
-<section class="video-wrapper"> <!-- Original size: width="560" height="315"-->
+<section class="video-wrapper" id="video"> <!-- Original size: width="560" height="315"-->
   <div class="resp-container">
-  <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="resp-iframe"  width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
 <section id="products" class="flex-container">
