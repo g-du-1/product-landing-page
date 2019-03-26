@@ -12,36 +12,75 @@
   box-sizing: border-box;
   max-width: 100%;
   overflow: auto;
-  font-family: proxima-nova, sans-serif;
-  font-style: normal;
-  font-weight: 300;
 }
 
 body {
-  background-color: #e4e4e4;
+  /*background-color: #e4e4e4;*/
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 header {
   background-color: white;
-  box-shadow: 1px 1px 1px #000000;
   display: flex;
-  padding: 10px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+
+  margin: 0 auto 20px auto;
+  width: 900px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 65px;
+  z-index: 1;
+
+  max-width: calc(100% - 16px);
+}
+
+#header-img {
+  margin-left: 10px;
+}
+
+a {
+  background-color: transparent;
+  color: #343a40;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #info {
   background-color: white;
-  margin: auto;
-  margin-bottom: 20px; 
-  box-shadow: 1px 1px 1px #000000;
+  margin: 80px auto 0 auto;
   width: 900px;
   padding: 20px;
+  text-align: center;
+}
+
+.video-wrapper {
+  max-width: 900px;
+  margin: 20px auto 10px auto;
 }
 
 .resp-container {
-  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .flex-container {
@@ -54,20 +93,19 @@ header {
 .column {
   background-color: white;
   flex-basis: calc(33% - 20px);
-  box-shadow: 1px 1px 1px #000000;
-  margin: 20px 0;
   padding: 20px;
+  margin: 10px 0;
   height: auto;
+
 }
 
 form {
   background-color: white;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: 10px auto 20px auto;
   text-align: center;
-  box-shadow: 1px 1px 1px #000000;
   width: 900px;
   padding: 20px;
+  line-height: 1.6;
 }
 
 #email {
@@ -75,39 +113,26 @@ form {
 }
 
 footer {
+  border-top: 1px solid #dee2e6;
   background-color: white;
-  box-shadow: 1px 1px 1px #000000;
   padding: 10px;
   text-align: left;
+
+  margin: auto;
+  width: 900px;
 }
 
-@media (max-width: 448px) {
-  .flex-container, header {
+@media (max-width: 500px) {
+  .flex-container {
     flex-direction: column;
   }
 
-  /* Video */
-
-  .resp-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-  }
-
-  .resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 </style>
 
 <header id="header">
-  <img src="https://i.imgur.com/TdkOGPt.jpg" alt="Company logo" height="100px" width="200px" id="header-img">
+  <img src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35px" width="35px" id="header-img">
   <nav id="nav-bar">
     <a href="#info" class="nav-link">Information</a>
     <a href="#video" class="nav-link">Video</a>
@@ -117,17 +142,19 @@ footer {
   <h1>Information</h1>
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
-<section class="resp-container"> <!-- Original size: width="560" height="315" 80% of size: width="448" height="254"-->
-  <iframe class="resp-iframe" id="video" width="448" height="254" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section class="video-wrapper"> <!-- Original size: width="560" height="315"-->
+  <div class="resp-container">
+  <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </section>
 <section id="products" class="flex-container">
   <div class="column col-1">
     <p>Product 1</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in. Praesent egestas est eu bibendum suscipit. Fusce condimentum, risus eleifend iaculis maximus, nisl dui iaculis felis, ornare bibendum nulla ex non magna. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in. Praesent egestas est eu bibendum suscipit. Fusce condimentum, risus eleifend iaculis maximus, nisl dui iaculis felis. </p>
   </div>
   <div class="column col-2">
     <p>Product 2</p>
-    <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget. Duis suscipit, mi nec vehicula fermentum, lorem turpis eleifend leo, eu maximus mauris augue a metus. Fusce malesuada accumsan lacus blandit viverra. </p>
+    <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget. Duis suscipit, mi nec vehicula fermentum, lorem turpis eleifend leo, eu maximus mauris augue a metus. </p>
   </div>
   <div class="column col-3">
     <p>Product 3</p>
@@ -140,7 +167,7 @@ footer {
   <input type="submit" id="submit">
 </form>
 <footer>
-  <p>Logo author: Cionca Bogdan - https://www.stockvault.net/</p>
+  <p>Logo author: Damien Van Holten - https://www.stockvault.net/</p>
 </footer>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
