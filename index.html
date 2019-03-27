@@ -16,7 +16,6 @@
 }
 
 body {
-  /*background-color: #e4e4e4;*/
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-weight: 400;
   line-height: 1.5;
@@ -99,6 +98,8 @@ a:hover {
 
 .column {
   background-color: white;
+  display: flex;
+  flex-direction: column;
   flex-basis: calc(33% - 20px);
   margin: 10px 0;
   height: auto;
@@ -115,6 +116,16 @@ a:hover {
 
 .column-body {
   padding: 20px;
+  flex-grow: 1;
+}
+
+h4 {
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
 }
 
 form {
@@ -130,13 +141,20 @@ form {
   height: 1.3rem;
 }
 
-#submit {
+#submit, button {
   background-color: #007bff;
   border-color: #007bff;
   color: #fff;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
 }
+
+.column-button {
+  margin: 20px auto;
+  width: 55px;
+  height: 31px;
+  border-radius: .25rem;
+}
+
 
 footer {
   border-top: 1px solid #dee2e6;
@@ -160,52 +178,67 @@ footer {
   <img src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35px" width="35px" id="header-img">
   <nav id="nav-bar">
     <a href="#info" class="nav-link">Information</a>
-    <a href="#video" class="nav-link">Video</a>
+    <a href="#video-container" class="nav-link">Video</a>
     <a href="#products" class="nav-link">Products</a>
   </nav>
 </header>
+
 <section id="info">
   <h1>Information</h1>
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
-<section class="video-wrapper" id="video"> <!-- Original size: width="560" height="315"-->
+
+<section class="video-wrapper" id="video-container"> <!-- Original size: width="560" height="315"-->
   <div class="resp-container">
-  <iframe class="resp-iframe"  width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
+
 <section id="products" class="flex-container">
   <div class="column">
     <div class="column-header">
-      <h4>Product</h4>
+      <h4>Free</h4>
     </div>
     <div class="column-body">
+      <h1>£0</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in. Praesent egestas est eu bibendum suscipit. Fusce condimentum, risus eleifend iaculis maximus, nisl dui iaculis felis. </p>
     </div>
+    <button type="button" class="column-button">Buy</button>
   </div>
+
   <div class="column">
     <div class="column-header">
-      <h4>Product</h4>
+      <h4>Basic</h4>
     </div>
-    <div class="column-body">    
+    <div class="column-body">
+    <h1>£50</h1>    
     <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget. Duis suscipit, mi nec vehicula fermentum, lorem turpis eleifend leo, eu maximus mauris augue a metus. </p>
     </div>
+    <button type="button" class="column-button">Buy</button>
   </div>
+
   <div class="column">
     <div class="column-header">
-      <h4>Product</h4>
+      <h4>Pro</h4>
     </div>
-    <div class="column-body">    
+    <div class="column-body">
+    <h1>£100</h1>    
     <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis. Nulla in velit et mi pharetra ullamcorper sed sed felis.</p>
     </div>
+    <button type="button" class="column-button">Buy</button>
   </div>
 </section>
+
 <form action="https://www.freecodecamp.org/email-submit" id="form">
   Subscribe to our newsletter: <br>
   <input type="email" id="email" name="email" placeholder="Enter Email" required>
   <input type="submit" id="submit">
 </form>
+
 <footer>
   <p>Logo author: Damien Van Holten - https://www.stockvault.net/</p>
 </footer>
+
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
