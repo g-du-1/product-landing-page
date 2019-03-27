@@ -173,19 +173,30 @@ footer {
   }
 }
 
-/* Hide fixed navbar on mobile devices when in landscape */
+/* Mobiles in landscape */
 
 @media only screen 
 and (min-device-width: 375px) 
 and (max-device-width: 850px) 
 and (orientation: landscape) {
+
+  /* Hide fixed nav bar*/
+
   header {
     position: absolute;
   }
 
+  /* Reduce padding*/
+
   #video-container,
   #products {
     padding-top: 0;
+  }
+
+  /* Make videos fit even on narrow devices */
+
+  #video-container {
+    width: calc(100vh * 1.777);
   }
 
 }
