@@ -2,9 +2,9 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="style.css"> -->
 <title>Product Landing Page</title>
 
+<!-- <link rel="stylesheet" href="style.css"> -->
 <!-- Test script doesn't work with external css for some reason -->
 
 <style>
@@ -44,7 +44,7 @@ header {
   z-index: 1;
 }
 
-#header-img {
+.logo {
   margin-left: 10px;
 }
 
@@ -61,7 +61,7 @@ a:hover {
 
 /* Info section */
 
-#info {
+.info-section {
   background-color: white;
   font-size: 1.25rem;
   font-weight: 300;
@@ -155,14 +155,14 @@ form {
   width: 900px;
 }
 
-#email {
+.email-field {
   height: 1.3rem;
 }
 
 /* Buttons */
 
-#submit,
-button {
+input[type="submit"],
+button[type="button"] {
   background-color: #007bff;
   border-color: #007bff;
   color: #fff;
@@ -213,13 +213,12 @@ and (orientation: landscape) {
   .video-wrapper {
     max-width: calc(100vh * 1.777);
   }
-
 }
 
 </style>
 
 <header id="header">
-  <img src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35" width="35" id="header-img">
+  <img src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35" width="35" id="header-img" class="logo">
   <nav id="nav-bar">
     <a href="#info" class="nav-link">Information</a>
     <a href="#video-container" class="nav-link">Video</a>
@@ -227,7 +226,7 @@ and (orientation: landscape) {
   </nav>
 </header>
 
-<section id="info">
+<section id="info" class="info-section">
   <h1>Information</h1>
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
@@ -275,7 +274,7 @@ and (orientation: landscape) {
 
 <form action="https://www.freecodecamp.org/email-submit" id="form">
   Subscribe to our newsletter: <br>
-  <input type="email" id="email" name="email" placeholder="Enter Email" required>
+  <input type="email" class="email-field" id="email" name="email" placeholder="Enter Email" required>
   <input type="submit" id="submit">
 </form>
 
