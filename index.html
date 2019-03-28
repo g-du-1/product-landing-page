@@ -9,15 +9,6 @@
 
 <style>
 
-/* Global styling */
-
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow: auto;
-  word-wrap: break-word;
-}
-
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-weight: 400;
@@ -30,6 +21,7 @@ header {
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #dee2e6;
+  box-sizing: border-box;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   display: flex;
   height: 65px;
@@ -37,6 +29,7 @@ header {
   left: 0;
   margin: 0 auto;
   max-width: calc(100% - 16px);
+  overflow: auto;
   position: fixed;
   right: 0;
   top: 0;
@@ -63,9 +56,12 @@ a:hover {
 
 .info-section {
   background-color: white;
+  box-sizing: border-box;
   font-size: 1.25rem;
   font-weight: 300;
   margin: 0 auto 0 auto;
+  max-width: 100%;
+  overflow: auto;
   padding: 65px 20px 0 20px;
   text-align: center;
   width: 900px;
@@ -98,9 +94,12 @@ a:hover {
 /* Product columns */
 
 .column-container {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  max-width: 100%;
+  overflow: auto;
   padding-top: 55px;
   width: 900px;
 }
@@ -148,15 +147,14 @@ h1 {
 
 form {
   background-color: white;
+  box-sizing: border-box;
   line-height: 1.6;
   margin: 10px auto 20px auto;
+  max-width: 100%;
+  overflow: auto;
   padding: 20px;
   text-align: center;
   width: 900px;
-}
-
-.email-field {
-  height: 1.3rem;
 }
 
 /* Buttons */
@@ -174,7 +172,10 @@ button[type="button"] {
 footer {
   background-color: white;
   border-top: 1px solid #dee2e6;
+  box-sizing: border-box;
   margin: auto;
+  max-width: 100%;
+  overflow: auto;
   padding: 10px;
   text-align: left;
   width: 900px;
