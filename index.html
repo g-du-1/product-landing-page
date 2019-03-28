@@ -89,7 +89,7 @@ a:hover {
   border: none;
 }
 
-.flex-container {
+.column-container {
   display: flex;
   width: 900px;
   margin: auto;
@@ -129,6 +129,13 @@ h1 {
   margin: 0;
 }
 
+.column-button {
+  margin: 20px auto;
+  width: 55px;
+  height: 31px;
+  border-radius: .25rem;
+}
+
 form {
   background-color: white;
   margin: 10px auto 20px auto;
@@ -149,14 +156,6 @@ form {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.column-button {
-  margin: 20px auto;
-  width: 55px;
-  height: 31px;
-  border-radius: .25rem;
-}
-
-
 footer {
   border-top: 1px solid #dee2e6;
   background-color: white;
@@ -168,7 +167,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-  .flex-container {
+  .column-container {
     flex-direction: column;
   }
 }
@@ -188,14 +187,14 @@ and (orientation: landscape) {
 
   /* Reduce padding*/
 
-  #video-container,
-  #products {
+  .video-wrapper,
+  .column-container {
     padding-top: 0;
   }
 
   /* Make videos fit even on narrow devices */
 
-  #video-container {
+  .video-wrapper {
     max-width: calc(100vh * 1.777);
   }
 
@@ -217,20 +216,20 @@ and (orientation: landscape) {
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
 
-<section class="video-wrapper" id="video-container"> <!-- Original size: width="560" height="315"-->
+<section class="video-wrapper" id="video-container">
   <div class="resp-container">
-  <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" allowfullscreen></iframe>
+    <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/wC4alzr2QcI" allowfullscreen></iframe>
   </div>
 </section>
 
-<section id="products" class="flex-container">
+<section class="column-container" id="products">
   <div class="column">
     <div class="column-header">
       <h4>Free</h4>
     </div>
     <div class="column-body">
       <h1>£0</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in. Praesent egestas est eu bibendum suscipit. Fusce condimentum, risus eleifend iaculis maximus, nisl dui iaculis felis. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in.</p>
     </div>
     <button type="button" class="column-button">Buy</button>
   </div>
@@ -240,8 +239,8 @@ and (orientation: landscape) {
       <h4>Basic</h4>
     </div>
     <div class="column-body">
-    <h1>£50</h1>    
-    <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget. Duis suscipit, mi nec vehicula fermentum, lorem turpis eleifend leo, eu maximus mauris augue a metus. </p>
+      <h1>£50</h1>    
+      <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget.</p>
     </div>
     <button type="button" class="column-button">Buy</button>
   </div>
@@ -251,8 +250,8 @@ and (orientation: landscape) {
       <h4>Pro</h4>
     </div>
     <div class="column-body">
-    <h1>£100</h1>    
-    <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis. Nulla in velit et mi pharetra ullamcorper sed sed felis.</p>
+      <h1>£100</h1>    
+      <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis.</p>
     </div>
     <button type="button" class="column-button">Buy</button>
   </div>
