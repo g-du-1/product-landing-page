@@ -7,6 +7,8 @@
 <!-- <link rel="stylesheet" href="style.css"> -->
 <!-- Test script doesn't work with external css for some reason -->
 
+<!-- TODO Remove unnecessary, change transition  -->
+
 <style>
 
 /*csslint box-sizing: false*/
@@ -23,24 +25,24 @@ header {
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #dee2e6;
-  box-sizing: border-box;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  box-sizing: border-box;
   display: flex;
-  height: 65px;
+  height: 4.0625rem;
   justify-content: space-between;
   left: 0;
   margin: 0 auto;
-  max-width: calc(100% - 16px);
+  max-width: calc(100% - 1rem);
   overflow: auto;
   position: fixed;
   right: 0;
   top: 0;
-  width: 900px;
+  width: 56.25rem;
   z-index: 1;
 }
 
 .logo {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 a {
@@ -64,17 +66,17 @@ a:hover {
   margin: 0 auto 0 auto;
   max-width: 100%;
   overflow: auto;
-  padding: 65px 20px 0 20px;
+  padding: 4.0625rem 1.25rem 0 1.25rem;
   text-align: center;
-  width: 900px;
+  width: 56.25rem;
 }
 
 /* Video */
 
 .video-wrapper {
-  margin: 0 auto 10px auto;
-  max-width: 900px;
-  padding-top: 65px;
+  margin: 0 auto 0.625rem auto;
+  max-width: 56.25rem;
+  padding-top: 4.0625rem;
 }
 
 .resp-container {
@@ -102,8 +104,8 @@ a:hover {
   margin: auto;
   max-width: 100%;
   overflow: auto;
-  padding-top: 55px;
-  width: 900px;
+  padding-top: 3.4375rem;
+  width: 56.25rem;
 }
 
 .column {
@@ -113,10 +115,10 @@ a:hover {
   border-radius: .25rem;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   display: flex;
-  flex-basis: calc(33% - 20px);
+  flex-basis: calc(33% - 1.25rem);
   flex-direction: column;
   height: auto;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .column-header {
@@ -129,11 +131,11 @@ a:hover {
 
 .column-body {
   flex-grow: 1;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 h4 {
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 h1 {
@@ -143,9 +145,9 @@ h1 {
 
 .column-button {
   border-radius: .25rem;
-  height: 31px;
-  margin: 20px auto;
-  width: 55px;
+  height: 1.9375rem;
+  margin: 1.25rem auto;
+  width: 3.4375rem;
 }
 
 /* Newsletter subscribe area */
@@ -154,12 +156,12 @@ form {
   background-color: white;
   box-sizing: border-box;
   line-height: 1.6;
-  margin: 10px auto 20px auto;
+  margin: 0.625rem auto 1.25rem auto;
   max-width: 100%;
   overflow: auto;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-  width: 900px;
+  width: 56.25rem;
 }
 
 /* Buttons */
@@ -181,14 +183,14 @@ footer {
   margin: auto;
   max-width: 100%;
   overflow: auto;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: left;
-  width: 900px;
+  width: 56.25rem;
 }
 
 /* Media Queries */
 
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
   .column-container {
     flex-direction: column;
   }
@@ -197,8 +199,8 @@ footer {
 /* Mobiles in landscape */
 
 @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 850px) 
+and (min-device-width: 23.4375rem) 
+and (max-device-width: 53.125rem) 
 and (orientation: landscape) {
 
   /* Hide fixed nav bar*/
