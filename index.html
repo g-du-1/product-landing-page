@@ -7,7 +7,7 @@
 <!-- <link rel="stylesheet" href="style.css"> -->
 <!-- Test script doesn't work with external css for some reason -->
 
-<!-- TODO Remove unnecessary, change transition  -->
+<!-- TODO Remove unnecessary  -->
 
 <style>
 
@@ -23,6 +23,7 @@ body {
 
 header {
   align-items: center;
+  background-color: #fff;
   border-bottom: 1px solid #dee2e6;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   box-sizing: border-box;
@@ -167,7 +168,12 @@ button[type="button"] {
   background-color: #007bff;
   border-color: #007bff;
   color: #fff;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  opacity: 0.8;
+  transition: opacity .2s;
+}
+
+input[type="submit"]:hover, button[type="button"]:hover {
+  opacity: 1;
 }
 
 /* Footer */
