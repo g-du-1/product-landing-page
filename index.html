@@ -218,22 +218,22 @@ and (orientation: landscape) {
 </style>
 
 <header id="header">
-  <img src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35" width="35" id="header-img" class="logo">
+  <img class="logo" id="header-img" src="https://i.imgur.com/DkVzYK2.jpg" alt="Company logo" height="35" width="35">
   <nav id="nav-bar">
-    <a href="#info" class="nav-link">Information</a>
-    <a href="#video-container" class="nav-link">Video</a>
-    <a href="#products" class="nav-link">Products</a>
+    <a class="nav-link" href="#info">Information</a>
+    <a class="nav-link" href="#video-container">Video</a>
+    <a class="nav-link" href="#products">Products</a>
   </nav>
 </header>
 
-<section id="info" class="info-section">
+<section class="info-section" id="info">
   <h1>Information</h1>
   <p>In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Lacus sed viverra tellus in hac habitasse. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</p>
 </section>
 
 <section class="video-wrapper" id="video-container">
   <div class="resp-container">
-    <iframe class="resp-iframe" id="video" width="900" height="506" src="https://www.youtube.com/embed/LjddezNFXmA" allowfullscreen></iframe>
+    <iframe class="resp-iframe" id="video" src="https://www.youtube.com/embed/LjddezNFXmA" width="900" height="506" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -246,7 +246,7 @@ and (orientation: landscape) {
       <h1>£20</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in.</p>
     </div>
-    <button type="button" class="column-button">Buy</button>
+    <button class="column-button" type="button">Buy</button>
   </div>
 
   <div class="column">
@@ -257,7 +257,7 @@ and (orientation: landscape) {
       <h1>£50</h1>    
       <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget.</p>
     </div>
-    <button type="button" class="column-button">Buy</button>
+    <button class="column-button" type="button">Buy</button>
   </div>
 
   <div class="column">
@@ -268,14 +268,14 @@ and (orientation: landscape) {
       <h1>£100</h1>    
       <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis.</p>
     </div>
-    <button type="button" class="column-button">Buy</button>
+    <button class="column-button" type="button">Buy</button>
   </div>
 </section>
 
-<form action="https://www.freecodecamp.org/email-submit" id="form">
+<form id="form" action="https://www.freecodecamp.org/email-submit">
   Subscribe to our newsletter: <br>
-  <input type="email" class="email-field" id="email" name="email" placeholder="Enter Email" required>
-  <input type="submit" id="submit">
+  <input class="email-field" id="email" name="email" type="email" placeholder="Enter Email" required>
+  <input id="submit" type="submit">
 </form>
 
 <footer>
