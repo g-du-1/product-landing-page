@@ -94,6 +94,7 @@ a:hover {
 
 .column-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: auto;
   max-width: 100%;
@@ -182,9 +183,9 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 31.25rem) {
+@media (min-width: 31.25rem) {
   .column-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
