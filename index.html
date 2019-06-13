@@ -13,7 +13,7 @@
 /*csslint box-sizing: false*/
 
 html {
-  margin: 0.5rem;
+  margin: 0 0.5rem;
 }
 
 body {
@@ -225,6 +225,16 @@ and (orientation: landscape) {
   .video,
   .column-container {
     padding-top: 0;
+  }
+
+  /* Fix anchor position in mobile landscape */
+
+  .video {
+    margin-bottom: 1.25rem;
+  }
+
+  .column {
+    margin: 0;
   }
 
   /* Make videos fit the viewport and keep aspect ratio */
