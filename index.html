@@ -2,6 +2,7 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="normalize.css">
 <title>Product Landing Page</title>
 
 <!-- <link rel="stylesheet" href="style.css"> -->
@@ -10,6 +11,10 @@
 <style>
 
 /*csslint box-sizing: false*/
+
+html {
+  margin: 0.5rem;
+}
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -124,6 +129,10 @@ a:hover {
   padding: 1.25rem;
 }
 
+.column__body h1 {
+  font-size: 1.5rem;
+}
+
 h4 {
   margin: 0.625rem;
 }
@@ -131,11 +140,12 @@ h4 {
 h1 {
   margin: 0;
   text-align: center;
+  font-size: 1.75rem;
 }
 
 .column__button {
   border-radius: .25rem;
-  height: 1.9375rem;
+  line-height: 1.65rem;
   margin: 1.25rem auto;
   width: 3.4375rem;
 }
@@ -167,6 +177,14 @@ button[type="button"] {
 input[type="submit"]:hover,
 button[type="button"]:hover {
   opacity: 1;
+}
+
+/* Button and email field font size */
+
+.column__button,
+.email-field,
+.submit-btn {
+  font-size: .875rem;
 }
 
 /* Footer */
@@ -276,7 +294,7 @@ and (orientation: landscape) {
 <form id="form" action="https://www.freecodecamp.org/email-submit">
   Subscribe to our newsletter: <br>
   <input class="email-field" id="email" name="email" type="email" placeholder="Enter Email" required>
-  <input id="submit" type="submit">
+  <input class="submit-btn" id="submit" type="submit">
 </form>
 
 <footer>
