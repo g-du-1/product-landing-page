@@ -133,7 +133,7 @@ a:hover {
   padding: 1.25rem;
 }
 
-.column__body h1 {
+.column__body-hdr {
   font-size: 1.5rem;
 }
 
@@ -142,9 +142,9 @@ h4 {
 }
 
 h1 {
+  font-size: 1.75rem;
   margin: 0;
   text-align: center;
-  font-size: 1.75rem;
 }
 
 .column__button {
@@ -237,8 +237,8 @@ and (orientation: landscape) {
   }
 
   .column {
-    margin-top: 0;
     margin-bottom: 1.25rem;
+    margin-top: 0;
   }
 
   form {
@@ -280,7 +280,7 @@ and (orientation: landscape) {
       <h4>Basic</h4>
     </div>
     <div class="column__body">
-      <h1>£20</h1>
+      <h1 class="column__body-hdr">£20</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque quam ex, eu finibus dui lacinia in.</p>
     </div>
     <button class="column__button" type="button">Buy</button>
@@ -291,7 +291,7 @@ and (orientation: landscape) {
       <h4>Pro</h4>
     </div>
     <div class="column__body">
-      <h1>£50</h1>    
+      <h1 class="column__body-hdr">£50</h1>    
       <p>Morbi fermentum ligula ac posuere facilisis. Praesent tincidunt velit ante, non viverra justo aliquet eget.</p>
     </div>
     <button class="column__button" type="button">Buy</button>
@@ -302,7 +302,7 @@ and (orientation: landscape) {
       <h4>Enterprise</h4>
     </div>
     <div class="column__body">
-      <h1>£100</h1>    
+      <h1 class="column__body-hdr">£100</h1>    
       <p>Duis justo nisi, volutpat vitae placerat ut, sodales in lorem. In tristique odio a sagittis venenatis.</p>
     </div>
     <button class="column__button" type="button">Buy</button>
