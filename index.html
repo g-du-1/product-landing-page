@@ -210,7 +210,6 @@ footer {
 /* Mobiles in landscape */
 
 @media only screen 
-and (min-device-width: 20rem) 
 and (max-device-width: 56.25rem) 
 and (orientation: landscape) {
 
@@ -234,7 +233,12 @@ and (orientation: landscape) {
   }
 
   .column {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  form {
+    margin-top: 0;
   }
 
   /* Make videos fit the viewport and keep aspect ratio */
